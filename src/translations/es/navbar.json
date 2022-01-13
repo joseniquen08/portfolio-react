@@ -1,0 +1,15 @@
+{
+  "ul": {
+    "about-me": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos"
+  },
+  "button": {
+    "contact": "Contacto"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  }
+}
