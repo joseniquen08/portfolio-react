@@ -2,7 +2,13 @@ import { Menu, RadioGroup, Transition } from "@headlessui/react";
 import { CheckCircleIcon, TranslateIcon } from "@heroicons/react/outline";
 import { Fragment } from "react";
 
-export const MenuLanguage = ({ lngSelected, setLngSelected, i18n }) => {
+export const MenuLanguage = ({ lngSelected, setLngSelected, i18n, changeLanguage }) => {
+
+  const changeLng = (lng) => {
+    i18n.changeLanguage(lng);
+    changeLanguage(lng);
+  }
+
   return (
     <Menu as="div" className="relative">
       <div className="">
@@ -31,7 +37,7 @@ export const MenuLanguage = ({ lngSelected, setLngSelected, i18n }) => {
                     >
                       {
                         ({ checked }) => (
-                          <button type="button" onClick={() => i18n.changeLanguage("en")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
+                          <button type="button" onClick={() => changeLng("en")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
                             <p>en</p>
                             <div className={`${checked ? 'text-white' : 'text-transparent'}`}>
                               <CheckCircleIcon className="w-5 h-5" />
@@ -45,7 +51,7 @@ export const MenuLanguage = ({ lngSelected, setLngSelected, i18n }) => {
                     >
                       {
                         ({ checked }) => (
-                          <button type="button" onClick={() => i18n.changeLanguage("es")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
+                          <button type="button" onClick={() => changeLng("es")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
                             <p>es</p>
                             <div className={`${checked ? 'text-white' : 'text-transparent'}`}>
                               <CheckCircleIcon className="w-5 h-5" />

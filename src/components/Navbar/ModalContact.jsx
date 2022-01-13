@@ -24,7 +24,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
     message: '',
   });
 
-  const [, , resetIsShowing] = useTimeoutFn(() => setSendSuccess(false), 2000);
+  const [, , resetIsShowing] = useTimeoutFn(() => setSendSuccess(false), 3000);
 
   const { user_name, user_email, message } = contact;
 
@@ -59,9 +59,9 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
         resetIsShowing();
       }
     }, (error) => {
+      setSendLoading(false);
+      setCheckedReCaptcha(false);
       if (error.text === "reCAPTCHA: The g-recaptcha-response parameter not found") {
-        setSendLoading(false);
-        setCheckedReCaptcha(false);
         setErrorReCaptcha(true);
       }
     });
@@ -183,6 +183,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                                 rows={3}
                                 id="message"
                                 value={message}
+                                required
                                 onChange={(e) => handleInputChange(e)}
                                 placeholder={t("form.message.placeholder")}
                                 className="block w-full px-4 py-2 text-sm border rounded-lg resize-none placeholder:text-gray-500 border-gray-300/70 dark:border-transparent dark:placeholder-gray-500 dark:bg-gray-900/50 dark:text-white focus:outline-none focus:border-transparent focus:shadow-lg focus:shadow-blue-600/50 focus:ring-blue-500 focus:ring-1"

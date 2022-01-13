@@ -22,6 +22,7 @@
     "react-i18next": "^11.15.3",
     "react-router-dom": "^6.1.1",
     "react-scripts": "5.0.0-next.58",
+    "react-scroll": "^1.8.4",
     "react-use": "^17.3.2",
     "web-vitals": "^2.1.2"
   },

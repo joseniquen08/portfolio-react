@@ -1,5 +1,32 @@
 import { Tab } from '@headlessui/react';
 import { useTranslation } from 'react-i18next';
+import { LogoSkill } from './LogoSkill';
+
+const skills = {
+  languages: [
+    { id: '1', img: 'javascript', name: 'JavaScript' },
+    { id: '2', img: 'html5', name: 'HTML5' },
+    { id: '3', img: 'css3', name: 'CSS3' },
+    { id: '4', img: 'java', name: 'Java' },
+    { id: '5', img: 'python', name: 'Python' },
+    { id: '6', img: 'cplusplus', name: 'C++' },
+  ],
+  lib_fram: [
+    { id: '7', img: 'reactjs', name: 'React' },
+    { id: '8', img: 'nextjs', name: 'Next.js' },
+    { id: '9', img: 'tailwindcss', name: 'Tailwind CSS' },
+    { id: '10', img: 'spring', name: 'Spring' },
+    { id: '11', img: 'codeigniter', name: 'CodeIgniter' },
+  ],
+  tools: [
+    { id: '12', img: 'vscode', name: 'VSCode' },
+    { id: '13', img: 'intellijidea', name: 'Intellij IDEA' },
+    { id: '14', img: 'mysql', name: 'MySQL' },
+    { id: '15', img: 'firebase', name: 'Firebase' },
+    { id: '16', img: 'photoshop', name: 'Photoshop' },
+    { id: '17', img: 'illustrator', name: 'Illustrator' },
+  ],
+};
 
 export const Skills = () => {
 
@@ -22,35 +49,29 @@ export const Skills = () => {
               <Tab.Panels className="max-w-2xl mx-auto mt-3 bg-gray-200 bg-opacity-50 dark:bg-white dark:bg-opacity-5 px-10 py-8 rounded-2xl">
                 <Tab.Panel>
                   <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/javascript.png" alt="logo_javascript" className="w-24" /><p>JavaScript</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/html5.png" alt="logo_html5" className="w-24" /><p>Html5</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/css3.png" alt="logo_css3" className="w-24" /><p>Css3</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/java.png" alt="logo_java" className="w-24" /><p>Java</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/python.png" alt="logo_python" className="w-24" /><p>Python</p></div>
-                    {/* <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/php.png" alt="logo_php" className="w-24" /><p>PHP</p></div> */}
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/cplusplus.png" alt="logo_cplusplus" className="w-24" /><p>C++</p></div>
+                    {
+                      skills.languages.map(skill => (
+                        <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
+                      ))
+                    }
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
                   <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/reactjs.png" alt="logo_reactjs" className="w-24" /><p>React</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/nextjs.png" alt="logo_nextjs" className="w-24" /><p>Next.js</p></div>
-                    {/* <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/vuejs.png" alt="logo_vuejs" className="w-24" /><p>Vue.js</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/expressjs.png" alt="logo_expressjs" className="w-24" /><p>Express</p></div> */}
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/tailwindcss.png" alt="logo_tailwindcss" className="w-24" /><p>Tailwind CSS</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/spring.png" alt="logo_spring" className="w-24" /><p>Spring</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/codeigniter.png" alt="logo_codeigniter" className="w-24" /><p>CodeIgniter</p></div>
+                    {
+                      skills.lib_fram.map(skill => (
+                        <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
+                      ))
+                    }
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
                   <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/vscode.png" alt="logo_vscode" className="w-24" /><p>VSCode</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/intellijidea.png" alt="logo_intellijidea" className="w-24" /><p>Intellij IDEA</p></div>
-                    {/* <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/git.png" alt="logo_git" className="w-24" /><p>Git</p></div> */}
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/mysql.png" alt="logo_mysql" className="w-24" /><p>MySQL</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/firebase.png" alt="logo_firebase" className="w-24" /><p>Firebase</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/photoshop.png" alt="logo_photoshop" className="w-24" /><p>Photoshop</p></div>
-                    <div className="flex flex-col items-center space-y-4 text-center lg:space-y-1"><img src="icons/illustrator.png" alt="logo_illustrator" className="w-24" /><p>Illustrator</p></div>
+                    {
+                      skills.tools.map(skill => (
+                        <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
+                      ))
+                    }
                   </div>
                 </Tab.Panel>
               </Tab.Panels>

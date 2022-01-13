@@ -19,6 +19,8 @@ import projects_en from './translations/en/projects.json';
 import projects_es from './translations/es/projects.json';
 import modal_contact_me_en from './translations/en/modal-contact-me.json';
 import modal_contact_me_es from './translations/es/modal-contact-me.json';
+import not_found_en from './translations/en/not-found.json';
+import not_found_es from './translations/es/not-found.json';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -31,7 +33,8 @@ i18next.init({
       skills: skills_en,
       footer: footer_en,
       projects: projects_en,
-      contact_me: modal_contact_me_en
+      contact_me: modal_contact_me_en,
+      not_found: not_found_en,
     },
     es: {
       navbar: navbar_es,
@@ -40,7 +43,8 @@ i18next.init({
       skills: skills_es,
       footer: footer_es,
       projects: projects_es,
-      contact_me: modal_contact_me_es
+      contact_me: modal_contact_me_es,
+      not_found: not_found_es,
     },
   },
 });
