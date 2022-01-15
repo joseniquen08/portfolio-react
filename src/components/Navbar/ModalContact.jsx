@@ -48,7 +48,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
     e.preventDefault();
     setSendLoading(true);
 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID_EMAIL, process.env.REACT_APP_TEMPLATE_ID_EMAIL, form.current, 'user_P1zlIH6ofgqJb6ykvUwXu')
+    emailjs.sendForm('service_u7nvnle', 'template_vt98gb2', form.current, 'user_P1zlIH6ofgqJb6ykvUwXu')
     .then((result) => {
       if (result.text === 'OK') {
         setSendLoading(false);
