@@ -20,6 +20,20 @@ export const Projects = () => {
       href: "https://react-coder-988f2.web.app/",
       image: "images/bootcampe_template.png",
       alert: t("db.alert"),
+    },
+    {
+      name: "Portfolio",
+      github: "https://github.com/joseniquen08/portfolio-react",
+      href: "https://joseniquen.me/",
+      image: "images/portfolio_template.png",
+      alert: "",
+    },
+    {
+      name: "Music Player",
+      github: "https://github.com/joseniquen08/music-player-react",
+      href: "https://music-player-react-nine.vercel.app/",
+      image: "images/music_player_template.png",
+      alert: t("db.message"),
     }
   ];
 
@@ -33,11 +47,11 @@ export const Projects = () => {
           {
             projects.map((project, index) => (
               <button key={index} type="button" className="relative my-3 overflow-hidden cursor-pointer card rounded-xl bg-slate-800/80">
-                <img src={project.image} alt="image_random" className="img opacity-40 md:opacity-100 object-cover object-center w-full" />
+                <img src={project.image} alt="image_random" className="object-cover object-center w-full img opacity-40 md:opacity-100" />
                 <div className="absolute bottom-0 flex items-center w-full h-10 px-6 text-white footer sm:duration-500 sm:translate-y-full bg-slate-900/70">
                   <p className="text-lg font-medium">{project.name}</p>
                 </div>
-                <p className="absolute inset-0 alert flex md:hidden items-center justify-center text-xl font-medium md:font-normal">{project.alert}</p>
+                <p className="absolute inset-0 flex items-center justify-center text-xl font-medium text-white alert md:hidden md:font-normal">{project.alert}</p>
                 <a href={`${project.href}`} target="_blank" rel="noreferrer"className="absolute p-2 text-white links sm:duration-500 sm:-translate-y-20 top-4 right-5 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl">
                   <GlobeAltIcon className="w-6 h-6" />
                 </a>

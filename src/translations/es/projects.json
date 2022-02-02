@@ -1,6 +1,7 @@
 {
   "title": "Proyectos",
   "db": {
-    "alert": "No es responsivo"
+    "alert": "No es responsivo",
+    "message": "Solicitar acceso temporal"
   }
 }

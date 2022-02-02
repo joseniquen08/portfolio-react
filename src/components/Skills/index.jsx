@@ -9,7 +9,7 @@ const skills = {
     { id: '3', img: 'css3', name: 'CSS3' },
     { id: '4', img: 'java', name: 'Java' },
     { id: '5', img: 'python', name: 'Python' },
-    { id: '6', img: 'cplusplus', name: 'C++' },
+    { id: '6', img: 'php', name: 'PHP' },
   ],
   lib_fram: [
     { id: '7', img: 'reactjs', name: 'React' },
@@ -33,22 +33,22 @@ export const Skills = () => {
   const [t] = useTranslation("skills");
 
   return (
-    <div id="skills" className=" px-5 sm:px-8 lg:px-16 pt-24 pb-12 mx-auto max-w-7xl dark:text-white">
+    <div id="skills" className="px-5 pt-24 pb-12 mx-auto  sm:px-8 lg:px-16 max-w-7xl dark:text-white">
       <div className="space-y-10">
         <div className="flex justify-center md:justify-start">
-          <p className="text-4xl md:text-5xl font-bold text-center w-max lg:text-left tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-500">{t("title")}</p>
+          <p className="text-4xl font-bold tracking-wide text-center text-transparent md:text-5xl w-max lg:text-left bg-clip-text bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-500">{t("title")}</p>
         </div>
         <div className="space-y-6">
           <div className="w-full max-w-3xl mx-auto">
             <Tab.Group>
-              <Tab.List className="flex flex-col sm:flex-row w-full max-w-2xl p-3 mx-auto text-sm md:text-base space-y-3 sm:space-y-0 sm:space-x-2 bg-gray-200 bg-opacity-70 dark:bg-white dark:bg-opacity-5 rounded-xl">
+              <Tab.List className="flex flex-col w-full max-w-2xl p-3 mx-auto space-y-3 text-sm bg-gray-200 sm:flex-row md:text-base sm:space-y-0 sm:space-x-2 bg-opacity-70 dark:bg-white dark:bg-opacity-5 rounded-xl">
                 <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 rounded-xl font-medium bg-gray-300 bg-opacity-70'}`}>{t("types.languages")}</Tab>
                 <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 rounded-xl font-medium bg-gray-300 bg-opacity-70'}`}>{t("types.lib-and-fram")}</Tab>
                 <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 rounded-xl font-medium bg-gray-300 bg-opacity-70'}`}>{t("types.tools")}</Tab>
               </Tab.List>
-              <Tab.Panels className="max-w-2xl mx-auto mt-3 bg-gray-200 bg-opacity-50 dark:bg-white dark:bg-opacity-5 px-10 py-8 rounded-2xl">
+              <Tab.Panels className="max-w-2xl px-10 py-8 mx-auto mt-3 bg-gray-200 bg-opacity-50 dark:bg-white dark:bg-opacity-5 rounded-2xl">
                 <Tab.Panel>
-                  <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
+                  <div className="grid grid-cols-3 gap-10 text-sm font-medium tracking-wide sm:text-base lg:text-lg">
                     {
                       skills.languages.map(skill => (
                         <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
@@ -57,7 +57,7 @@ export const Skills = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
-                  <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
+                  <div className="grid grid-cols-3 gap-10 text-sm font-medium tracking-wide sm:text-base lg:text-lg">
                     {
                       skills.lib_fram.map(skill => (
                         <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
@@ -66,7 +66,7 @@ export const Skills = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel>
-                  <div className="grid grid-cols-3 gap-10 text-sm sm:text-base lg:text-lg font-medium tracking-wide">
+                  <div className="grid grid-cols-3 gap-10 text-sm font-medium tracking-wide sm:text-base lg:text-lg">
                     {
                       skills.tools.map(skill => (
                         <LogoSkill key={skill.id} img={skill.img} name={skill.name} />
