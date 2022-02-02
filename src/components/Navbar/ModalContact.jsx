@@ -1,13 +1,12 @@
-import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Dialog, Tab, Transition } from "@headlessui/react";
 import { CheckCircleIcon, XIcon } from "@heroicons/react/outline";
-import { Whatsapp, Telegram, Instagram, Linkedin } from "@icons-pack/react-simple-icons";
-import { Fragment, useState } from "react";
+import { Instagram, Linkedin, Telegram, Whatsapp } from "@icons-pack/react-simple-icons";
+import { Fragment, useRef, useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
-import emailjs from '@emailjs/browser';
-import { ButtonLoading } from './ButtonLoading';
 import { useTimeoutFn } from 'react-use';
+import { ButtonLoading } from './ButtonLoading';
 
 export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, language }) => {
 
@@ -48,7 +47,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
     e.preventDefault();
     setSendLoading(true);
 
-    emailjs.sendForm('service_u7nvnle', 'template_vt98gb2', form.current, 'user_P1zlIH6ofgqJb6ykvUwXu')
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID_EMAIL, process.env.REACT_APP_TEMPLATE_ID_EMAIL, form.current, process.env.REACT_APP_USER_ID_EMAIL)
     .then((result) => {
       if (result.text === 'OK') {
         setSendLoading(false);
@@ -224,7 +223,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                         </form>
                       </Tab.Panel>
                       <Tab.Panel className="h-104 md:h-108">
-                        <div className="flex flex-col w-full h-full justify-center space-y-6 font-medium text-white">
+                        <div className="flex flex-col justify-center w-full h-full space-y-6 font-medium text-white">
                           <a href="https://api.whatsapp.com/send?phone=51933839178" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 md:py-2 space-x-2 w-full rounded-xl [background-color:#25D366] shadow-lg shadow-[#25D366]/50">
                             <Whatsapp className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Whatsapp</p>
