@@ -1,11 +1,12 @@
-import { Menu, RadioGroup, Transition } from "@headlessui/react"
-import { DesktopComputerIcon, MoonIcon, SunIcon } from "@heroicons/react/outline"
-import { Fragment } from "react"
+import { Menu, RadioGroup, Transition } from "@headlessui/react";
+import { DesktopComputerIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { motion } from "framer-motion";
+import { Fragment } from "react";
 
 export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) => {
   return (
     <Menu as="div" className="relative sm:pr-1">
-      <div className="">
+      <motion.div whileTap={{ scale: 0.9 }}>
         <Menu.Button className="flex items-center justify-center p-1.5 lg:p-2 text-4xl hover:bg-gray-100 dark:hover:bg-white dark:hover:bg-opacity-5 rounded-xl focus:outline-none">
           {
             'theme' in localStorage === true ? (
@@ -23,7 +24,7 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
             )
           }
         </Menu.Button>
-      </div>
+      </motion.div>
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -33,7 +34,7 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute z-40 right-0 mt-2 origin-top-right bg-white rounded-lg shadow-lg focus:outline-none dark:bg-slate-900">
+        <Menu.Items className="absolute right-0 z-40 mt-2 origin-top-right bg-white rounded-lg shadow-lg focus:outline-none dark:bg-slate-900">
           <div className="bg-white border rounded-lg bg-opacity-10 dark:border-transparent">
             <div className="px-2.5 py-2">
               <Menu.Item as="div" className="focus:outline-none">

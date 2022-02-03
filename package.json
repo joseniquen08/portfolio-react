@@ -1,6 +1,6 @@
 {
   "name": "portafolio-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
@@ -12,9 +12,7 @@
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@icons-pack/react-simple-icons": "^4.6.1",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^6.2.3",
     "i18next": "^21.6.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,7 +22,7 @@
     "react-scripts": "5.0.0-next.58",
     "react-scroll": "^1.8.4",
     "react-use": "^17.3.2",
-    "web-vitals": "^2.1.2"
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,8 +32,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

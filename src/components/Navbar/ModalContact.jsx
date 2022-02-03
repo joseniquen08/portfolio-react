@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import { Dialog, Tab, Transition } from "@headlessui/react";
 import { CheckCircleIcon, XIcon } from "@heroicons/react/outline";
 import { Instagram, Linkedin, Telegram, Whatsapp } from "@icons-pack/react-simple-icons";
+import { motion } from "framer-motion";
 import { Fragment, useRef, useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
@@ -118,9 +119,13 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                 <div className="md:col-span-1 md:px-3">
                   <Tab.Group>
                     <Tab.List className="flex flex-col sm:flex-row w-full text-sm md:text-base space-y-1.5 md:space-y-0 md:space-x-3 rounded-xl">
-                      <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 dark:text-white rounded-xl font-medium bg-gray-300 bg-opacity-70'}`}>{t("types.form")}</Tab>
+                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.99 }} className="w-full">
+                        <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 dark:text-white rounded-xl font-medium bg-gray-200 bg-opacity-70'}`}>{t("types.form")}</Tab>
+                      </motion.div>
                       <div className="flex items-center justify-center"><p className="font-medium dark:text-white">{t("types.or")}</p></div>
-                      <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 dark:text-white rounded-xl font-medium bg-gray-300 bg-opacity-70'}`}>{t("types.buttons")}</Tab>
+                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.99 }} className="w-full">
+                        <Tab className={({ selected }) => `w-full py-2.5 leading-5 font-semibold rounded-lg ${selected ? 'bg-blue-700 text-white shadow-lg shadow-blue-600/50' : 'dark:bg-white dark:bg-opacity-5 dark:text-white rounded-xl font-medium bg-gray-200 bg-opacity-70'}`}>{t("types.buttons")}</Tab>
+                      </motion.div>
                     </Tab.List>
                     <Tab.Panels className="mt-3.5 bg-gray-200 bg-opacity-50 dark:bg-gray-50 dark:bg-opacity-5 px-5 md:px-6 py-6 rounded-2xl">
                       <Tab.Panel className="relative h-104 md:h-108">
@@ -223,23 +228,23 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                         </form>
                       </Tab.Panel>
                       <Tab.Panel className="h-104 md:h-108">
-                        <div className="flex flex-col justify-center w-full h-full space-y-6 font-medium text-white">
-                          <a href="https://api.whatsapp.com/send?phone=51933839178" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 md:py-2 space-x-2 w-full rounded-xl [background-color:#25D366] shadow-lg shadow-[#25D366]/50">
+                        <div className="flex flex-col justify-center w-full h-full space-y-6 font-medium text-white md:text-lg">
+                          <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://api.whatsapp.com/send?phone=51933839178" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#25D366] shadow-lg shadow-[#25D366]/50">
                             <Whatsapp className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Whatsapp</p>
-                          </a>
-                          <a href="https://t.me/joseniquen" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 md:py-2 space-x-2 w-full rounded-xl [background-color:#26A5E4] shadow-lg shadow-[#26A5E4]/50">
+                          </motion.a>
+                          <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://t.me/joseniquen" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#26A5E4] shadow-lg shadow-[#26A5E4]/50">
                             <Telegram className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Telegram</p>
-                          </a>
-                          <a href="https://www.instagram.com/jose.niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 md:py-2 space-x-2 w-full rounded-xl [background-color:#E4405F] shadow-lg shadow-[#E4405F]/50">
+                          </motion.a>
+                          <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://www.instagram.com/jose.niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#E4405F] shadow-lg shadow-[#E4405F]/50">
                             <Instagram className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Instagram</p>
-                          </a>
-                          <a href="https://www.linkedin.com/in/jose-niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 md:py-2 space-x-2 w-full rounded-xl [background-color:#0A66C2] shadow-lg shadow-[#0A66C2]/50">
+                          </motion.a>
+                          <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/jose-niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#0A66C2] shadow-lg shadow-[#0A66C2]/50">
                             <Linkedin className="w-6 h-6 md:w-7 md:h-7" />
                             <p>LinkedIn</p>
-                          </a>
+                          </motion.a>
                         </div>
                       </Tab.Panel>
                     </Tab.Panels>
