@@ -9,7 +9,7 @@ export const Header = () => {
     <div className="flex flex-col-reverse space-y-reverse space-y-12 lg:flex-row w-full px-2 lg:px-16 py-10 lg:pt-36 lg:pb-16 mx-auto max-w-7xl">
       <div className="flex flex-col justify-center flex-none space-y-14">
         <div className="flex flex-col justify-center space-y-3 lg:space-y-4 text-center lg:text-left">
-          <p className="text-4xl lg:text-6xl font-bold lg:tracking-wide dark:text-white text-slate-900">{t("hi")}👋</p>
+          <p className="text-4xl lg:text-6xl font-bold lg:tracking-wide dark:text-white text-slate-900">{t("hi")}</p>
           <p className="text-5xl break-words font-bold lg:tracking-wide leading-tight lg:text-7xl dark:text-white text-slate-900">{t("i-am")} <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:to-cyan-500 font-extrabold">{t("name")}</span></p>
           <p className="text-2xl lg:text-4xl font-bold lg:tracking-wide dark:text-white text-slate-900">{t("junior-one")}</p>
           <p className="text-2xl lg:text-4xl font-bold lg:tracking-wide dark:text-white text-slate-900"><span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-600" >{t("junior-two")}</span></p>

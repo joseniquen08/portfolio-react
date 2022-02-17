@@ -9,6 +9,14 @@ export const Projects = () => {
   const projects = [
     {
       id: v4(),
+      name: "Licius (Social Network)",
+      github: "https://github.com/joseniquen08/licius-react",
+      href: "https://licius-react.vercel.app/",
+      image: "images/licius_template.png",
+      alert: "",
+    },
+    {
+      id: v4(),
       name: "Edullka (Landing)",
       github: "https://github.com/edullka/edullka-react",
       href: "https://edullka.com/",
