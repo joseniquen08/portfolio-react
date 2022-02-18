@@ -1,6 +1,6 @@
-import { PlusSmIcon } from '@heroicons/react/outline';
-import { Github, Instagram, Linkedin, ReactJs, Tailwindcss } from "@icons-pack/react-simple-icons";
 import { useTranslation } from "react-i18next";
+import { HiOutlinePlusSm } from 'react-icons/hi';
+import { SiGithub, SiInstagram, SiLinkedin, SiReact, SiTailwindcss } from "react-icons/si";
 
 export const Footer = () => {
 
@@ -13,21 +13,21 @@ export const Footer = () => {
           <div className="flex flex-col z-20 md:flex-row space-y-3 md:space-y-0 space-x-0 md:space-x-2.5 items-center justify-center">
             <p className="text-sm md:text-base">{t("made-with")}</p>
             <div className="flex items-center space-x-1.5" >
-              <ReactJs className="w-16 h-16 md:w-9 md:h-9" />
-              <PlusSmIcon className="w-6 h-6 md:w-4 md:h-4" />
-              <Tailwindcss className="w-16 h-16 md:w-9 md:h-9" />
+              <SiReact className="w-16 h-16 md:w-9 md:h-9" />
+              <HiOutlinePlusSm className="w-6 h-6 md:w-4 md:h-4" />
+              <SiTailwindcss className="w-16 h-16 md:w-9 md:h-9" />
             </div>
           </div>
           <p className="text-center md:absolute z-10 inset-0 flex items-center justify-center">{t("copyright")}</p>
           <div className="flex justify-center z-20 space-x-4 md:space-x-2 text-lg dark:text-white text-slate-900">
             <a href="https://github.com/joseniquen08" target='_blank' rel="noreferrer"className="flex items-center justify-center font-medium hover:bg-slate-900 hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5 h-11 w-11 rounded-xl">
-              <Github className="w-8 h-8 md:w-6 md:h-6" />
+              <SiGithub className="w-8 h-8 md:w-6 md:h-6" />
             </a>
             <a href="https://www.linkedin.com/in/jose-niquen/" target='_blank' rel="noreferrer"className="flex items-center justify-center font-medium hover:bg-slate-900 hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5 h-11 w-11 rounded-xl">
-              <Linkedin className="w-8 h-8 md:w-6 md:h-6" />
+              <SiLinkedin className="w-8 h-8 md:w-6 md:h-6" />
             </a>
             <a href="https://www.instagram.com/jose.niquen/" target='_blank' rel="noreferrer"className="flex items-center justify-center font-medium hover:bg-slate-900 hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5 h-11 w-11 rounded-xl">
-              <Instagram className="w-8 h-8 md:w-6 md:h-6" />
+              <SiInstagram className="w-8 h-8 md:w-6 md:h-6" />
             </a>
           </div>
         </div>

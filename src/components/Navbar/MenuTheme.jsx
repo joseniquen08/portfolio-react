@@ -1,7 +1,7 @@
 import { Menu, RadioGroup, Transition } from "@headlessui/react";
-import { DesktopComputerIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import { Fragment } from "react";
+import { HiOutlineDesktopComputer, HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 
 export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) => {
   return (
@@ -11,15 +11,15 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
           {
             'theme' in localStorage === true ? (
               themeSelected === "dark" ? (
-                <MoonIcon className="w-6 h-6 text-blue-500" />
+                <HiOutlineMoon className="w-6 h-6 text-blue-500" />
               ) : (
-                <SunIcon className="w-6 h-6 text-yellow-500" />
+                <HiOutlineSun className="w-6 h-6 text-yellow-500" />
               )
             ) : (
               window.matchMedia('(prefers-color-scheme: dark)').matches === true ? (
-                <MoonIcon className="w-6 h-6 text-gray-700 dark:text-white" />
+                <HiOutlineMoon className="w-6 h-6 text-gray-700 dark:text-white" />
               ) : (
-                <SunIcon className="w-6 h-6 text-gray-700 dark:text-white" />
+                <HiOutlineSun className="w-6 h-6 text-gray-700 dark:text-white" />
               )
             )
           }
@@ -47,7 +47,7 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
                         ({ checked }) => (
                           <button type="button" onClick={() => changeTheme("light")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} w-full px-3 py-2 lg:py-1 focus:outline-none rounded-lg flex items-center justify-start space-x-2`}>
                             <div className={`${checked ? 'text-white' : 'text-slate-700 dark:text-white'}`}>
-                              <SunIcon className="w-5 h-5" />
+                              <HiOutlineSun className="w-5 h-5" />
                             </div>
                             <p>{t("theme.light")}</p>
                           </button>
@@ -61,7 +61,7 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
                         ({ checked }) => (
                           <button type="button" onClick={() => changeTheme("dark")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} w-full px-3 py-2 lg:py-1 focus:outline-none rounded-lg flex items-center justify-start space-x-2`}>
                             <div className={`${checked ? 'text-white' : 'text-slate-700 dark:text-white'}`}>
-                              <MoonIcon className="w-5 h-5" />
+                              <HiOutlineMoon className="w-5 h-5" />
                             </div>
                             <p>{t("theme.dark")}</p>
                           </button>
@@ -75,7 +75,7 @@ export const MenuTheme = ({ themeSelected, setThemeSelected, changeTheme, t }) =
                         ({ checked }) => (
                           <button type="button" onClick={() => changeTheme("sys")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} w-full px-3 py-2 lg:py-1 focus:outline-none rounded-lg flex items-center justify-start space-x-2`}>
                             <div className={`${checked ? 'text-white' : 'text-slate-700 dark:text-white'}`}>
-                              <DesktopComputerIcon className="w-5 h-5" />
+                              <HiOutlineDesktopComputer className="w-5 h-5" />
                             </div>
                             <p>{t("theme.system")}</p>
                           </button>

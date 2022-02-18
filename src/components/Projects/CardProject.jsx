@@ -1,6 +1,6 @@
-import { GlobeAltIcon } from "@heroicons/react/outline";
-import { Github } from "@icons-pack/react-simple-icons";
 import { motion } from "framer-motion";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
+import { SiGithub } from "react-icons/si";
 
 export const CardProject = ({ image, name, alert, href, github }) => {
   return (
@@ -11,10 +11,10 @@ export const CardProject = ({ image, name, alert, href, github }) => {
       </div>
       <p className="absolute inset-0 flex items-center justify-center text-xl font-medium text-white alert md:hidden md:font-normal">{alert}</p>
       <a href={`${href}`} target="_blank" rel="noreferrer"className="absolute p-2 text-white links sm:duration-500 sm:-translate-y-20 top-4 right-5 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl">
-        <GlobeAltIcon className="w-6 h-6" />
+        <HiOutlineGlobeAlt className="w-6 h-6" />
       </a>
       <a href={`${github}`} target="_blank" rel="noreferrer"className="absolute p-2 text-white links sm:duration-500 sm:-translate-y-20 top-4 left-5 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl">
-        <Github className="w-6 h-6" />
+        <SiGithub className="w-6 h-6" />
       </a>
     </motion.div>
   );

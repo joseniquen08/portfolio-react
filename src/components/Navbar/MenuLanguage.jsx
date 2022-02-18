@@ -1,7 +1,7 @@
 import { Menu, RadioGroup, Transition } from "@headlessui/react";
-import { CheckCircleIcon, TranslateIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import { Fragment } from "react";
+import { HiCheckCircle, HiOutlineTranslate } from "react-icons/hi";
 
 export const MenuLanguage = ({ lngSelected, setLngSelected, i18n, changeLanguage }) => {
 
@@ -14,7 +14,7 @@ export const MenuLanguage = ({ lngSelected, setLngSelected, i18n, changeLanguage
     <Menu as="div" className="relative">
       <motion.div whileTap={{ scale: 0.9 }}>
         <Menu.Button className="flex items-center justify-center py-1.5 lg:py-2 px-2 sm:px-3 font-medium text-slate-800 dark:text-white lg:text-lg space-x-1 lg:space-x-1.5 focus:outline-none hover:bg-gray-100 dark:hover:bg-white dark:hover:bg-opacity-5 rounded-xl">
-          <TranslateIcon className="w-5 h-5 lg:w-6 lg:h-6" />
+          <HiOutlineTranslate className="w-5 h-5 lg:w-6 lg:h-6" />
           <p>{lngSelected}</p>
         </Menu.Button>
       </motion.div>
@@ -41,7 +41,7 @@ export const MenuLanguage = ({ lngSelected, setLngSelected, i18n, changeLanguage
                           <button type="button" onClick={() => changeLng("en")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
                             <p>en</p>
                             <div className={`${checked ? 'text-white' : 'text-transparent'}`}>
-                              <CheckCircleIcon className="w-5 h-5" />
+                              <HiCheckCircle className="w-5 h-5" />
                             </div>
                           </button>
                         )
@@ -55,7 +55,7 @@ export const MenuLanguage = ({ lngSelected, setLngSelected, i18n, changeLanguage
                           <button type="button" onClick={() => changeLng("es")} className={`${checked ? 'bg-blue-600 text-white font-medium' : 'hover:bg-gray-200/60 dark:hover:bg-white dark:hover:bg-opacity-10'} px-3 py-1.5 lg:py-1 focus:outline-none rounded-lg flex items-center justify-center space-x-1`}>
                             <p>es</p>
                             <div className={`${checked ? 'text-white' : 'text-transparent'}`}>
-                              <CheckCircleIcon className="w-5 h-5" />
+                              <HiCheckCircle className="w-5 h-5" />
                             </div>
                           </button>
                         )

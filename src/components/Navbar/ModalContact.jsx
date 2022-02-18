@@ -1,11 +1,11 @@
 import emailjs from '@emailjs/browser';
 import { Dialog, Tab, Transition } from "@headlessui/react";
-import { CheckCircleIcon, XIcon } from "@heroicons/react/outline";
-import { Instagram, Linkedin, Telegram, Whatsapp } from "@icons-pack/react-simple-icons";
 import { motion } from "framer-motion";
 import { Fragment, useRef, useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
+import { HiCheckCircle, HiOutlineX } from 'react-icons/hi';
+import { SiInstagram, SiLinkedin, SiTelegram, SiWhatsapp } from "react-icons/si";
 import { useTimeoutFn } from 'react-use';
 import { ButtonLoading } from './ButtonLoading';
 
@@ -141,7 +141,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                         >
                           <div className="absolute inset-0 z-10">
                             <div className="flex flex-col items-center justify-center w-full h-full space-y-3 font-medium text-white rounded-xl to-green-500 from-green-600 bg-gradient-to-r">
-                              <CheckCircleIcon className="w-16 h-16" />
+                              <HiCheckCircle className="w-16 h-16" />
                               <p className="text-2xl">{t("form.success-message")}</p>
                             </div>
                           </div>
@@ -230,19 +230,19 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
                       <Tab.Panel className="h-104 md:h-108">
                         <div className="flex flex-col justify-center w-full h-full space-y-6 font-medium text-white md:text-lg">
                           <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://api.whatsapp.com/send?phone=51933839178" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#25D366] shadow-lg shadow-[#25D366]/50">
-                            <Whatsapp className="w-6 h-6 md:w-7 md:h-7" />
+                            <SiWhatsapp className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Whatsapp</p>
                           </motion.a>
                           <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://t.me/joseniquen" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#26A5E4] shadow-lg shadow-[#26A5E4]/50">
-                            <Telegram className="w-6 h-6 md:w-7 md:h-7" />
+                            <SiTelegram className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Telegram</p>
                           </motion.a>
                           <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://www.instagram.com/jose.niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#E4405F] shadow-lg shadow-[#E4405F]/50">
-                            <Instagram className="w-6 h-6 md:w-7 md:h-7" />
+                            <SiInstagram className="w-6 h-6 md:w-7 md:h-7" />
                             <p>Instagram</p>
                           </motion.a>
                           <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }} href="https://www.linkedin.com/in/jose-niquen/" target="_blank" rel="noreferrer" className="flex items-center justify-center py-2.5 space-x-2 w-full rounded-xl [background-color:#0A66C2] shadow-lg shadow-[#0A66C2]/50">
-                            <Linkedin className="w-6 h-6 md:w-7 md:h-7" />
+                            <SiLinkedin className="w-6 h-6 md:w-7 md:h-7" />
                             <p>LinkedIn</p>
                           </motion.a>
                         </div>
@@ -253,7 +253,7 @@ export const ModalContact = ({ theme, contactModalIsOpen, closeContactModal, lan
               </div>
               <div className="absolute md:hidden top-6 right-5">
                 <button onClick={closeContactModal} type="button" className="focus:outline-none bg-gray-200/80 dark:bg-slate-700 dark:text-white rounded-full p-1.5">
-                  <XIcon className="w-5 h-5" />
+                  <HiOutlineX className="w-5 h-5" />
                 </button>
               </div>
             </div>
