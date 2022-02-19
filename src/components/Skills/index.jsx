@@ -1,40 +1,15 @@
 import { Tab } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import skills from '../../utils/data/skills';
 import { LogoSkill } from './LogoSkill';
-
-const skills = {
-  languages: [
-    { id: '1', img: 'javascript', name: 'JavaScript' },
-    { id: '2', img: 'html5', name: 'HTML5' },
-    { id: '3', img: 'css3', name: 'CSS3' },
-    { id: '4', img: 'java', name: 'Java' },
-    { id: '5', img: 'python', name: 'Python' },
-    { id: '6', img: 'php', name: 'PHP' },
-  ],
-  lib_fram: [
-    { id: '7', img: 'reactjs', name: 'React' },
-    { id: '8', img: 'nextjs', name: 'Next.js' },
-    { id: '9', img: 'tailwindcss', name: 'Tailwind CSS' },
-    { id: '10', img: 'spring', name: 'Spring' },
-    { id: '11', img: 'codeigniter', name: 'CodeIgniter' },
-  ],
-  tools: [
-    { id: '12', img: 'vscode', name: 'VSCode' },
-    { id: '13', img: 'intellijidea', name: 'Intellij IDEA' },
-    { id: '14', img: 'mysql', name: 'MySQL' },
-    { id: '15', img: 'firebase', name: 'Firebase' },
-    { id: '16', img: 'photoshop', name: 'Photoshop' },
-    { id: '17', img: 'illustrator', name: 'Illustrator' },
-  ],
-};
 
 export const Skills = () => {
 
   const [t] = useTranslation("skills");
 
   return (
-    <div id="skills" className="px-5 pt-24 pb-12 mx-auto sm:px-8 lg:px-16 max-w-7xl dark:text-white">
+    <div id="skills" className="px-5 pt-24 pb-12 mx-auto sm:px-8 lg:px-16 max-w-6xl dark:text-white">
       <div className="space-y-10">
         <div className="flex justify-center md:justify-start">
           <p className="text-4xl font-bold tracking-wide text-center text-transparent md:text-5xl w-max lg:text-left bg-clip-text bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-500">{t("title")}</p>

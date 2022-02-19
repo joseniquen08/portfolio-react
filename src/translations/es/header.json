@@ -1,7 +1,5 @@
 {
-  "hi": "Bienvenido,",
-  "i-am": "Soy",
+  "hi": "Bienvenido, soy",
   "name": "José Ñiquen",
-  "junior-one": "Y soy un Junior",
-  "junior-two": "Front-end Developer"
+  "junior": "Junior Frontend Developer"
 }

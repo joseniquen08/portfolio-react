@@ -13,7 +13,7 @@ export const Projects = () => {
       github: "https://github.com/joseniquen08/licius-react",
       href: "https://licius-react.vercel.app/",
       image: "images/licius_template.png",
-      alert: "",
+      alert: t("db.progress"),
     },
     {
       id: v4(),
@@ -50,12 +50,12 @@ export const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="px-4 pt-24 pb-12 mx-auto lg:px-16 max-w-7xl dark:text-white">
+    <div id="projects" className="px-5 pt-24 pb-12 mx-auto sm:px-8 lg:px-16 max-w-6xl dark:text-white">
       <div className="space-y-10">
         <div className="flex justify-center md:justify-start">
           <p className="py-1 text-4xl font-bold tracking-wide text-center text-transparent md:text-5xl w-max lg:text-left bg-clip-text bg-gradient-to-r from-blue-600 to-sky-600 dark:to-sky-500">{t("title")}</p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
           {
             projects.map(({id, name, image, href, alert, github}) => (
               <CardProject

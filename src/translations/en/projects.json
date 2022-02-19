@@ -1,7 +1,8 @@
 {
   "title": "Projects",
   "db": {
+    "progress": "In production",
     "alert": "It's not responsive",
-    "message": "Request tempory acces"
+    "message": "Request tempory access"
   }
 }

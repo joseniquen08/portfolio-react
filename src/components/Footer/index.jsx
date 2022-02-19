@@ -7,7 +7,7 @@ export const Footer = () => {
   const [t] = useTranslation("footer");
 
   return (
-    <footer className="bg-gray-200/50 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-900/95 dark:text-white">
+    <footer className="dark:text-white">
       <div className="px-4 sm:px-10 lg:px-16 pt-6 pb-10 md:py-6 mx-auto max-w-7xl">
         <div className="relative flex flex-col md:flex-row space-y-8 md:space-y-0 w-full items-center justify-between">
           <div className="flex flex-col z-20 md:flex-row space-y-3 md:space-y-0 space-x-0 md:space-x-2.5 items-center justify-center">
